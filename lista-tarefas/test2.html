@@ -1,27 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test2</title>
-    <!-- Css no mesmo arquivo -->
+    <title>Test 2</title>
     <style>
         body {
-            background: blue;
-            color: #fff;
-            font-size: 22px;
+            background: #121212;
+            color: #f5f5f5;
             font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         .doris {
-            border: 3px solid red;
-            max-width: 500;
+            max-width: 600px;
+            margin: 50px auto;
+            background: #1e1e1e;
+            border: 2px solid #333;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .titulo {
+            color: #00c8ff;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .subTitulo {
+            color: #aaa;
+            font-size: 20px;
+            margin-top: 0;
+            font-weight: normal;
+        }
+
+        .textBangu {
+            color: #ffb300;
+            font-size: 18px;
+            margin: 15px;
+        }
+
+        .juliana {
+            color: pink;
+            font-size: 18px;
+            font-style: italic;
+            margin: 10px;
+        }
+
+        .devJones {
+            background: #00c8ff;
+            color: #121212;
+            padding: 8px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .b2 {
+            display: inline-block;
+            margin: 15px;
+            padding: 8px 20px;
+            border: 2px solid #00c8ff;
+            border-radius: 10px;
+            background: #00c8ff;
+            color: #121212;
+            font-weight: bold;
+        }
+
+        .smallDudu {
+            display: inline-block;
+            margin: 15px;
+            padding: 8px 20px;
+            border: 2px solid #00c8ff;
+            border-radius: 10px;
+            background: #00c8ff;
+            color: #121212;
+            font-weight: bold;
+
+        }
+
+
+        .imgDev {
+            border: 3px solid #00c8ff;
+            border-radius: 12px;
+            margin: 25px 0;
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease;
+        }
+
+        .imgDev:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
+
 <body>
-        <div>
-           <h1>test 2</h1> 
-        </div>
+    <div class="doris">
+        <h1 class="titulo">Test 2</h1>
+        <h2 class="subTitulo">Rodriguinho</h2>
+        <h3 class="textBangu">Bangu</h3>
+        <h4 class="juliana">Juliana</h4>
+        <h5 class="devJones">Dev Jones</h5>
+        <strong class="b2">B2</strong>
+        <small class="smallDudu">Dudu</small>
+        <br>
+        <img src="img/img1.jpg" class="imgDev" />
+    </div>
 </body>
+
 </html>
