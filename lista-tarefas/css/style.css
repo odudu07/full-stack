@@ -1,43 +1,66 @@
 body {
-    background: url('../img/bg-site.jpg') no-repeat;
-    background-size: cover;
+  background: url('../img/bg-site.jpg') no-repeat;
+  background-size: cover;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
+/* Container principal */
 #container {
-    background: #fff;
-    /* Largura da tela*/
-    max-width: 400px;
-    /* Centralizar */
-    margin: 0 auto;
-    border-radius: 15px;
-    /* Espaçamento dentro do elemento */
-    padding: 15px;
-    text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Título */
 #container h1 {
-    color: blueviolet;
-    /* Espaçamento dentro do elemento */
-    padding: 15px;
-    /* Tamanho de texto */
-    font-size: 30px;
+  color: #2a7bd6;
+  padding: 10px;
+  font-size: 28px;
+  border-bottom: 2px solid #a3d4ff;
+  margin-bottom: 15px;
 }
 
+/* Campo de texto */
 #tarefa {
-    border: 2px solid #d3d3d3;
-    padding: 5px;
-    border-radius: 5px;
-    outline: none;
-    color: red;
+  border: 2px solid #bcdcff;
+  padding: 8px;
+  border-radius: 6px;
+  outline: none;
+  color: #1b5fa7;
+  width: 70%;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#tarefa:focus {
+  border-color: #4ca3ff;
+  box-shadow: 0 0 6px rgba(76, 163, 255, 0.4);
 }
 
 #tarefa::placeholder {
-    color: rgb(199, 197, 197);
+  color: #a0a0a0;
 }
 
+/* Botão de adicionar */
 .btnAdicionar {
-    background: rgb(139, 198, 225);
-    padding: 7px;
-    border: 0;
-    border-radius: 8px;
+  background: linear-gradient(135deg, #66b2ff, #3f9df5);
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnAdicionar:hover {
+  background: linear-gradient(135deg, #5aa7f5, #238cff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(35, 140, 255, 0.3);
 }

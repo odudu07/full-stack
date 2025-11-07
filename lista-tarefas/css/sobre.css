@@ -1,124 +1,111 @@
-/* Reset e estilo base */
+/* Reset geral */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
+/* Fundo da página */
 body {
-  background: linear-gradient(135deg, #b3b3ff, #c6c6c6);
-  font-family: "Poppins", Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
+  background: linear-gradient(135deg, #d0ecff, #b5dbff);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 40px 10px;
+  color: #333;
 }
 
 /* Container principal */
-.container {
-  background: #fff;
-  max-width: 900px;
+#container {
+  background: #ffffff;
+  max-width: 400px;
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 30px 40px;
-  transition: transform 0.3s ease;
-}
-
-.container:hover {
-  transform: translateY(-5px);
-}
-
-/* Títulos */
-.container h1 {
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 25px 20px;
   text-align: center;
-  color: #5a2d82;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+#container h1 {
+  color: #2a80d7;
+  padding: 10px;
+  font-size: 28px;
+  font-weight: 600;
+  border-bottom: 2px solid #a7d5ff;
   margin-bottom: 20px;
 }
 
-.container h2 {
-  color: #4a148c;
-  margin-top: 30px;
-  border-left: 5px solid #9c27b0;
-  padding-left: 10px;
-}
-
-.container h3 {
-  color: #5e35b1;
-  margin-top: 25px;
-}
-
-/* Parágrafos */
-.container p {
-  margin: 10px 0 20px;
-  font-size: 1.1em;
-}
-
-/* Lista de interesses */
-.list-dev {
-  border: 2px dotted #7b1fa2;
-  margin: 20px auto;
-  max-width: 400px;
-  padding: 15px;
+/* Campo de entrada */
+#tarefa {
+  border: 2px solid #b6dfff;
+  padding: 8px;
   border-radius: 8px;
-  background: #f3e5f5;
-  transition: all 0.5s ease;
-}
-
-.list-dev li {
-  margin: 8px 0;
-  font-weight: 500;
-}
-
-.list-dev:hover {
-  background: #5c6bc0;
-  color: #fff;
-  border-color: #3f51b5;
-}
-
-/* Lista ordenada */
-ol {
-  margin-left: 20px;
-  padding-left: 20px;
-  font-size: 1.1em;
-}
-
-ol li {
-  margin: 6px 0;
-}
-
-/* Linha divisória */
-hr {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, #9c27b0, #2196f3);
-  margin: 30px 0;
-  border-radius: 2px;
-}
-
-/* Link de navegação */
-.links {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.links a {
-  padding: 15px 30px;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  color: #6a1b9a;
-  border: 2px solid #6a1b9a;
-  border-radius: 8px;
+  outline: none;
+  color: #0077cc;
+  width: 70%;
+  font-size: 16px;
   transition: all 0.3s ease;
 }
 
-.links a:hover {
-  background: #6a1b9a;
-  color: #fff;
-  text-decoration: none;
+#tarefa:focus {
+  border-color: #4ca3ff;
+  box-shadow: 0 0 6px rgba(76, 163, 255, 0.4);
+}
+
+#tarefa::placeholder {
+  color: #9bbad1;
+}
+
+/* Botão de adicionar */
+.btnAdicionar {
+  background: linear-gradient(135deg, #66b2ff, #409eff);
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnAdicionar:hover {
+  background: linear-gradient(135deg, #5baaff, #238cff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(64, 158, 255, 0.3);
+}
+
+/* Lista de tarefas (se tiver) */
+ul {
+  list-style: none;
+  margin-top: 20px;
+  text-align: left;
+}
+
+ul li {
+  background: #f2f8ff;
+  border: 1px solid #cfe7ff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li:hover {
+  background: #e3f2ff;
 }
