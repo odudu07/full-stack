@@ -7,6 +7,6 @@ function adicionar() {
   let item = document.createElement("li");
   item.textContent = tarefa.value;
 
-lista.appendChild(item);
-
+  lista.appendChild(item);
+  tarefa.value = "";
 }
