@@ -1,6 +1,6 @@
 // Função em JavaScript
 function adicionar() {
-  // Variáeis
+  // Variáveis
   let tarefa = document.getElementById("tarefa");
   let lista = document.getElementById("lista");
 
@@ -8,5 +8,6 @@ function adicionar() {
   item.textContent = tarefa.value;
 
   lista.appendChild(item);
+
   tarefa.value = "";
 }
