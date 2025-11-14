@@ -1,9 +1,10 @@
 const numbers = [90, 10, 30];
 
-let total = 0;
+let sum = 0;
 
 for (let i = 0; i < numbers.length; i++) {
-  total += numbers[i];
+  console.log(numbers[i]);
+  sum = sum + numbers[i];
 }
 
-console.log("Total:", total);
+console.log("O resultado é " + sum);
