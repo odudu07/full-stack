@@ -3,6 +3,7 @@ const lista = document.querySelector(".lista");
 const inputNome = document.getElementById("nome");
 const inputEmail = document.getElementById("email");
 const inputTel = document.getElementById("telefone");
+const listaMsg = document.querySelector(".lista-msg");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -13,8 +14,27 @@ form.addEventListener("submit", function (event) {
     return false;
   }
 
+  // Condição, para retirar a li > .lista-msg
+  if (listaMsg) {
+    listaMsg.remove();
+  }
+
+  // Criando botão Excluir
+  const btnExcluir = document.createElement("button");
+  btnExcluir.textContent = "Excluir";
+  btnExcluir.className = "btn-delete";
+
   // Criar LI
   const li = document.createElement("li");
+
+  // Criando uma função para excluir
+  btnExcluir.addEventListener("click", function () {
+    const confirmar = confirm("Tem certeza que deseja excluir o contato?");
+
+    if (confirmar) {
+      li.remove();
+    }
+  });
 
   li.innerHTML = `
         <span class="contato-nome">${inputNome.value}</span>
@@ -22,10 +42,9 @@ form.addEventListener("submit", function (event) {
         <span class="contato-telefone">${inputTel.value}</span>
     `;
 
-  console.log(li);
-
   // appendChild()
   lista.appendChild(li);
+  li.appendChild(btnExcluir);
 
   // Limpar inputs
   form.reset();
